@@ -1,0 +1,19 @@
+﻿@model MVCExcel.Models.AutoModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm("CreateStandardReport", "Home", FormMethod.Post, Model))
+{
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            De @Html.TextBoxFor(m => m.Naam) heeft @Html.TextBoxFor(m => m.AantalWielen) wielen.
+        </p>
+        <p>
+            Message: @Html.DisplayFor(m => m.Message)
+        </p>
+        <input type="submit" value="Maak standaard rapport" id="btnCreateReport" name="btnStart" class="pull-right" />
+    </div>
+</div>
+}
